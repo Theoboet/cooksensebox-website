@@ -396,7 +396,7 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
@@ -823,47 +823,68 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
     font-size: 0.875rem;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    h1 { font-size: 4rem; }
-    h2 { font-size: 3rem; }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-
-    .showcase-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .showcase-item.large {
-        grid-row: span 1;
-    }
-}
-
+/* Responsive - Mobile Only */
 @media (max-width: 768px) {
+    /* Hide navigation links, show mobile menu button */
     .nav-links {
         display: none;
     }
 
-    h1 { font-size: 3rem; }
-    h2 { font-size: 2.25rem; }
+    .btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
 
     .container-fluid {
         padding: 0 var(--space-md);
     }
 
     .hero {
-        padding: 10rem 0 var(--space-lg);
+        padding: 8rem 0 var(--space-lg);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+
+    .hero-left {
+        order: 1;
+    }
+
+    .hero-right {
+        order: 2;
     }
 
     .hero-stats {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-product {
+        width: 100%;
     }
 
     .showcase-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .showcase-item {
+        height: 350px;
     }
 
     .experience-flow,
@@ -871,6 +892,14 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
     .intelligence-grid,
     .specs-modern {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .flow-card,
+    .tech-card-modern,
+    .intel-card,
+    .spec-group-modern {
+        padding: var(--space-md);
     }
 
     .cta-benefits {
@@ -880,14 +909,33 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
 
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .footer-links {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .floating-decorations {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2.25rem; }
-    h2 { font-size: 1.75rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+
+    .hero-tag {
+        font-size: 0.7rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .btn-lg {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
