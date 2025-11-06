@@ -344,7 +344,7 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
 }
 
 .hero-product {
-    width: 100%;
+    width: 120%;
     height: auto;
     filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.15));
     transition: transform 0.5s ease;
