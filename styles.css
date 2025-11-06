@@ -396,7 +396,7 @@ h3 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
 
 .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.3fr 1fr 1fr;
     gap: var(--space-lg);
 }
 
